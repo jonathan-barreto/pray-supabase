@@ -165,11 +165,9 @@ BEGIN
   WHERE user_id = p_user_id;
 END;
 $$;
-
 COMMENT ON FUNCTION public.update_user_metrics_for_user(uuid) IS 
 'Recalcula todas as métricas de um usuário baseado em seu histórico completo de completions.
 IMPORTANTE: Valida se o streak ainda é válido comparando a data mais recente com a data atual (tolerância de 3 dias).';
-
 -- ============================================================================
 -- RESUMO DA CORREÇÃO
 -- ============================================================================
@@ -177,4 +175,4 @@ IMPORTANTE: Valida se o streak ainda é válido comparando a data mais recente c
 -- - Se passou mais de 3 dias desde o último completion, streak_days = 0
 -- - Isso garante que o streak seja zerado automaticamente quando o usuário
 --   fica muito tempo sem completar devocionais
--- ============================================================================
+-- ============================================================================;

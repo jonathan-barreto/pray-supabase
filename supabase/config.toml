@@ -65,6 +65,18 @@ entrypoint = "./functions/user-password-update/index.ts"
 # For example, if you want to serve static HTML pages in your function:
 # static_files = [ "./functions/user-password-update/*.html" ]
 
+[functions.user-password-reset-request]
+enabled = true
+verify_jwt = false
+import_map = "./functions/user-password-reset-request/deno.json"
+entrypoint = "./functions/user-password-reset-request/index.ts"
+
+[functions.user-password-reset-confirm]
+enabled = true
+verify_jwt = false
+import_map = "./functions/user-password-reset-confirm/deno.json"
+entrypoint = "./functions/user-password-reset-confirm/index.ts"
+
 [functions.private-devotional-like]
 enabled = true
 verify_jwt = true

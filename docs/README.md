@@ -17,6 +17,10 @@ Esta documentação descreve os endpoints disponíveis na API Praify.
   - Body: `{ email, password }`
 - **PUT** `/user-password-update` - Atualizar senha do usuário
   - Body: `{ current_password, new_password }`
+- **POST** `/user-password-reset-request` - Solicitar recuperação de senha (sem autenticação)
+  - Body: `{ email }`
+- **POST** `/user-password-reset-confirm` - Confirmar recuperação de senha (sem autenticação)
+  - Body: `{ access_token, new_password }`
 - **DELETE** `/user-delete` - Remover conta do usuário
 - **GET** `/user-metrics` - Obter métricas do usuário (streaks, completions, rank)
 - **GET** `/user-achievements-progress` - Obter progresso de conquistas do usuário
